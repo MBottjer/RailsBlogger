@@ -14,3 +14,6 @@ end
 Then(/^I should see "(.*?)"$/) do |arg1|
   has_content?(arg1)
 end
+
+
+

@@ -1,2 +1,35 @@
-<h1>Michael Bottjer/h1>
-<%= link_to "My Blog", controller: "posts" %>
+<html>
+  <head>
+    <title>My Blog</title>
+    <link href="/stylesheets/application.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Oxygen+Mono' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class="home_center">
+      <h1 class="name">Michael Bottjer</h1>
+      <%= link_to "My Blog", controller: "posts" %>
+    </div>
+  <script>
+    var $win = $(window),
+      w = 0,h = 0,
+      rgb = [],
+      getWidthandHeight = function() {
+          w = $win.width();
+          h = $win.height();
+      };
+
+    $win.resize(getWidthandHeight).mousemove(function(event) {
+
+      rgb = [
+          Math.floor(event.pageX/w * 255),
+          Math.floor(event.pageY/h * 255),
+          70
+      ];
+
+    $("h1.name").css('color','rgb('+rgb.join(',')+')');
+    $("div.home_center a").css('color','rgb('+rgb.join(',')+')');
+
+      }).resize();
+    </script>
+  </body>
+</html>

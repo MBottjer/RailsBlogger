@@ -1,3 +1,24 @@
-// Place all the styles related to the Home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  text-align:center;
+}
+
+div.home_center {
+margin-top: 20%;
+}
+
+div.home_center a {
+  font-size:50px;
+  colour: white;
+  font-family: 'Oxygen Mono', sans-serif;
+  text-decoration: none;
+}
+
+a:visited {
+  colour: black;
+}
+
+div.home_center h1 {
+  font-size:100px;
+  colour: white;
+  font-family: 'Oxygen Mono', sans-serif;
+}

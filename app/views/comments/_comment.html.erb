@@ -1,0 +1,17 @@
+<%= comment.votes_total %>
+<%= button_to '☝',  post_comment_votes_path(@post, comment, direction: 'up') %>
+<%= button_to '☟',  post_comment_votes_path(@post, comment, direction: 'down') %>
+
+<p>
+  <strong>Commenter:</strong>
+  <%= comment.commenter %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= comment.body %>
+</p>
+
+<p>
+  <%= link_to 'Destroy Comment', [comment.post, comment], method: :delete, data: { confirm: 'Are you sure?' } %>
+</p>

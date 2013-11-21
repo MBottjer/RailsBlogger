@@ -32,12 +32,13 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-group :test do 
+group :test, :development do 
   gem 'rspec-rails' 
   gem 'capybara'
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
   gem 'shoulda-matchers'
+  gem 'poltergeist'
 end
 
 # Use ActiveModel has_secure_password

@@ -1,6 +1,12 @@
 BloggingApp::Application.routes.draw do
   
-  resources :posts 
+  get "comment_vote/create"
+  resources :posts do 
+    resources :comments do 
+      resource :votes 
+    end
+    resource :votes
+  end
   # get "home/index"
   root "home#index"
 
